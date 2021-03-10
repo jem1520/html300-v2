@@ -1,0 +1,47 @@
+// Source code from Transform Rotate Example by Rachel Cope: https://codepen.io/rachelcope/pen/mhkgr
+// Source code from Transform Scale, Example by Rachel Cope: https://codepen.io/rachelcope/pen/gbxxXe
+
+// animation mixin for rotating icons
+@mixin animations {
+  transition: all 3s;
+  transition-timing-function: ease;
+}
+
+// Settings for icon size and position
+@mixin iconsize {
+  height: auto;
+  width: 15rem;
+  margin: 8%;
+}
+
+// Bike wheel icon rotate animation
+.wheelicon {
+  @include iconsize;
+
+  &:hover {
+    transform: $rotate-bikewheel;
+    @include animations;
+  }
+}
+
+// Chemex icon pour animation
+.chemexicon {
+  @include iconsize;
+
+  &:hover {
+    transform: $rotate-chemex;
+    transition: all 2s;
+    transition-timing-function: ease-out;
+  }
+}
+
+// Bread icon double in size animation
+.breadicon {
+  @include iconsize;
+  padding-bottom: 2%;
+
+  &:hover {
+    transform: scale(2);
+    @include animations;
+  }
+}
