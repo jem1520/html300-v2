@@ -1,6 +1,7 @@
 // Import partials here
-@import 'base.normalize';
+
 @import 'settings.variables';
-@import 'settings.responsive';
 @import 'components.content';
 
+// Import google font for header text
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
