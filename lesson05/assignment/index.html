@@ -6,10 +6,87 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="css/style.css" />
         <title>Assignment 05 - CSS Grid</title>
+        <script src="https://kit.fontawesome.com/3fd57895ac.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <main class="main">
-          
-        </main>
+      <!--CSS grid-->
+      <div class="grid-container">
+        <!--Header content for page-->
+        <div class="grid-item-header">
+          <img class="header-bannerimage" src="images/BCBBanner.jpg" alt="banner image of bikes coffe and baked goods">
+          <h1>BIKE COFFEE BAKE</h1>
+          <h2>Est. 2021</h2>
+        </div>
+        <!--Navigation for page-->
+        <div class="grid-item-nav">
+          <nav class="navmenu">
+            <ul class="navmenu__list">
+              <li class="navmenu__item">
+                <a href="link">About</a>
+              </li>
+              <li class="navmenu__item">
+                <a href="link">Bike Shop</a>
+              </li>
+              <li class="navmenu__item">
+                <a href="link">Coffee Menu</a>
+              </li>
+              <li class="navmenu__item">
+                <a href="link">Bake Shop</a>
+              </li>
+              <li class="navmenu__item">
+                <a href="link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!--Sidebar content for page-->
+        <div class="grid-item-sidebar">
+          <section class="sidebar">
+            <img class="BCBlogo" src="images/BCBLogo-01.jpg" alt="logo of bikes wheel chemex and bread, bike coffee bake text">
+            <p>Home brewed in Winston Salem, NC</p>
+            <p>Order now!</p>
+            <p>Phone: 333.333.3333</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </section>
+        </div>
+        <!--Main content of page -->
+        <div class="grid-item-maincontent">
+          <section class="maincontent">
+            <div class="maincontent__flexboxcontent">
+              <h2>Welcome! We have bike tune ups, craft coffee, and bake goods to offer you! Come visit us soon at our Winston-Salem location.</h2>
+              <h2>Highlights</h2>
+            </div>
+            <div class="maincontent__flexboxcontent">
+              <p>New Bike Tires</p>
+              <img class="maincontent__biketiresicon" src="images/BikeWheelsGraphic3.svg" alt="three bike wheels overlapping icon">
+            </div>
+            <div class="maincontent__flexboxcontent">
+              <p>Chemex Pourovers</p>
+              <img class="maincontent__chemexicon" src="images/ChemexIcon-1.svg" alt="Chemex icon">
+            </div>
+            <div class="maincontent__flexboxcontent">
+              <p>Rustic Whole Wheat</p>
+              <img class="maincontent__breadicon" src="images/BreadIcon.svg" alt="bread icon">
+            </div>
+          </section>
+        </div>
+        <!--Page footer content-->
+        <div class="grid-item-footer">
+          <footer class="footer">
+            <div class="footer__flexboxcontent">
+              <img class="footer__logo" src="images/BCBLogo-01.jpg" alt="logo of bikes wheel chemex and bread, bike coffee bake text">
+            </div>
+            <div class="footer__flexboxcontent">
+              <p>Follow</p>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-facebook-square"></i>
+              <i class="fab fa-twitter-square"></i>
+            </div>
+            <div class="footer__flexboxcontent">
+              <p>2021 Bike Coffee Bake, All Rights Reserved.</p>
+            </div>
+          </footer>
+        </div>
+      </div>
     </body>
 </html>
