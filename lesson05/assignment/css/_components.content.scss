@@ -1,13 +1,173 @@
-html {
-    box-sizing: border-box;
+// page CSS grid container
+.grid-container {
+  display: grid;
+  grid-template-areas:
+  "header header header header header header"
+  "nav nav nav nav nav nav"
+  "sidebar sidebar maincontent maincontent maincontent maincontent"
+  "sidebar sidebar maincontent maincontent maincontent maincontent"
+  "footer footer footer footer footer footer";
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1rem 2rem;
+}
+// media query grid container for smaller devices
+@media (max-width: 600px) {
+   .grid-container {
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "sidebar sidebar"
+    "maincontent maincontent"
+    "footer footer";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
 }
 
-*,
-*:after,
-*:before {
-    box-sizing: inherit;
-}
+// header styling
+.grid-item-header {
+  grid-area: header;
+  padding-bottom: 5px;
 
-.main {
+  // Header font
+  @mixin bannerfont {
+    font-family: 'Special Elite', cursive;
+    color: $font-gray;
+    margin: 0;
+    padding: 1%;
+    font-weight: normal;
+  }
+  // header image
+  .header-bannerimage {
+    width: 99%;
+    height: auto;
+    z-index: -1;
+    position: absolute;
+  }
+  // header text and responsive sizing
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 180%;
+    }
+    h2 {
+      font-size: 75%;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    h1 {
+      font-size: 375%;
+    }
+    h2 {
+      font-size: 150%;
+    }
+  }
+  h1 {
+    @include bannerfont;
+    text-shadow: 2px 3px 5px $white;
+    padding-bottom: 16%;
+  }
+  h2 {
+    @include bannerfont;
+    padding-left: 12%;
+  }
+}
+// Navigation menu styling
+.grid-item-nav {
+  grid-area: nav;
+  .navmenu {
+    background: $blue;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1rem 1rem 2rem;
+    flex-wrap: wrap;
+    &__list {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    &__item {
+      display: inline-block;
+      font-size: 100%;
+      padding-right: 3rem;
+      padding-left: 4rem;
+      padding-bottom: 1rem;
+    }
+    //styling links
+    a {
+      font-size: 250%;
+      color: white;
+    }
+    a:link {
+      text-decoration: none;
+    }
+    a:visited {
+      text-decoration: none;
+    }
+  }
+}
+// sidebar styling
+.grid-item-sidebar {
+  grid-area: sidebar;
+  .sidebar {
+    padding-left: 5rem;
+    width: 50%;
+  }
+  .BCBlogo {
+    width: 75%;
+    height: auto;
+  }
+}
+// main content styling
+.grid-item-maincontent {
+  grid-area: maincontent;
+    .maincontent {
+    background-image: linear-gradient(to right, rgba(128, 85, 0, 0), rgba(128, 85, 0, 1));
     padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-left: solid $font-dropshaddow-gray 3px;
+    &__biketiresicon, &__chemexicon, &__breadicon {
+    height: 70%;
+    width: auto;
+    }
+    &__flexboxcontent {
+      padding: 5rem;
+    }
+  }
+}
+// footer styling
+.grid-item-footer {
+  grid-area: footer;
+  i {
+    font-size: 200%;
+    padding: 2rem;
+  }
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: $light-blue;
+    font-size: 100%;
+    color: $white;
+    &__logo {
+    width: 20rem;
+    height: auto;
+    }
+    &__flexboxcontent {
+      padding: 2rem;
+    }
+  }
+}
+// Footer responsive sizing elements for smaller screens
+@media (max-width: 600px) {
+  .footer {
+    padding: 0;
+  }
+}
+@media (min-width: 600px) {
+  .footer {
+    padding: 2rem 15rem;
+  }
 }
