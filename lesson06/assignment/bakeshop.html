@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <title>Assignment 06 - Bootstrap 4</title>
+    </head>
+    <body>
+      <!-- Header with logo image -->
+      <header>
+        <h1 class="display-1 text-center">Bike Coffee Bake</h1>
+        <img src="images/BCBLogo3-01.svg" class="mx-auto d-block" alt="logo of bike wheel, chemex and bread" style="width:40%;">
+        <h3 class="display-4 text-center mb-3">Est. 2021</h3>
+      </header>
+      <!-- Responsive navigation menu -->
+        <nav class="navbar text-uppercase navbar-expand-lg navbar-light bg-primary">
+          <div class="container">
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div id="navbarNav" class="collapse	navbar-collapse">
+              <ul class="navbar-nav">
+                <li class="nav-item ml-5">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item ml-5">
+                  <a class="nav-link" href="bikeshop.html">BikeShop</a>
+                </li>
+                <li class="nav-item ml-5">
+                  <a class="nav-link" href="coffeeshop.html">CoffeeShop</a>
+                </li>
+                <li class="nav-item ml-5">
+                  <a class="nav-link" href="bakeshop.html">BakeShop</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      <!-- Responsive images using Bootstap grid system -->
+      <section>
+        <h2 class="display-3 text-center pt-5">Welcome to Our Bakery</h2>
+        <div class="row lead m-4">
+          <div class="col-xl-4 col-md-6 col-sm-12 mb-4">
+            <img src="images/Bagel.jpg" class="img-fluid rounded mx-auto d-block m-5" alt="image of fresh bagels">
+          </div>
+          <div class="col-xl-4 col-md-6 col-sm-12 mb-4">
+            <img src="images/Bread.jpg" class="img-fluid rounded mx-auto d-block m-5" alt="image of fresh rustic bread">
+          </div>
+          <div class="col-xl-4 col-md-6 col-sm-12 mb-4">
+            <img src="images/StickyBuns.jpg" class="img-fluid rounded mx-auto d-block m-5" alt="image of fresh sticky buns">
+          </div>
+        </div>
+        <!-- Accordion for page content sections -->
+        <div id="accordion" class="m-4">
+          <div class="card m-4">
+            <div class="card-header">
+              <h5 class="display-4 text-center m-2">
+                <a href="#menu" data-parent="#accordion" data-toggle="collapse" aria-expanded="true">Our Menu</a>
+              </h5>
+            </div>
+            <div id="menu" class="collapse show">
+              <div class="card-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </div>
+            </div>
+          </div>
+          <div class="card m-4">
+            <div class="card-header">
+              <h5 class="display-4 text-center m-2">
+                <a href="#ingredients" data-parent="#accordion" data-toggle="collapse" aria-expanded="false">Our Ingredients</a>
+              </h5>
+            </div>
+            <div id="ingredients" class="collapse">
+              <div class="card-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </div>
+            </div>
+          </div>
+          <div class="card m-4">
+            <div class="card-header">
+              <h5 class="display-4 text-center m-2">
+                <a href="#story" data-parent="#accordion" data-toggle="collapse" aria-expanded="false">Our Story</a>
+              </h5>
+            </div>
+            <div id="story" class="collapse">
+              <div class="card-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        <!-- Responsive footer elements with additional nav menu -->
+        <footer>
+          <img src="images/BCBBanner.jpg" class="img-fluid" alt="banner image of bikes, coffee and baked goods">
+          <nav class="navbar text-uppercase navbar-expand-sm bg-dark">
+            <div class="container">
+              <ul class="navbar-nav">
+                <li class="nav-item ml-5">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item ml-5">
+                  <a class="nav-link" href="bikeshop.html">BikeShop</a>
+                </li>
+                <li class="nav-item ml-5">
+                  <a class="nav-link" href="coffeeshop.html">CoffeeShop</a>
+                </li>
+                <li class="nav-item ml-5">
+                  <a class="nav-link" href="bakeshop.html">BakeShop</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <p class="text-center mt-2">2021 BCB</p>
+        </footer>
+    </body>
+</html>
+
+</html>
